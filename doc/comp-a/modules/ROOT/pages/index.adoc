@@ -1,0 +1,15 @@
+= {page-component-title}
+
+This is ::
++
+--
+
+[horizontal]
+
+page-component-name ::
+{page-component-name}
+
+page-component-version ::
+{page-component-version}
+
+--

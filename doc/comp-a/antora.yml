@@ -1,0 +1,18 @@
+name: a
+title: Component A
+version: true
+nav:
+- modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    icons: font@
+    experimental: '@'
+    sectids: '@'
+    sectanchors: '@'
+    idprefix: '@'
+    idseparator: '-@'
+    table-frame: none@
+    table-grid: none@
+    xrefstyle: short@
+    example-caption: false
+    listing-caption: false

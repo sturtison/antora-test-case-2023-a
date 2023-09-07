@@ -1,0 +1,51 @@
+:gh-repo-name: antora-test-case-2023-a
+= {gh-repo-name}
+:experimental:
+:source-language: yaml
+:source-highlighter: highlightjs
+:gh-repo-org: sturtison
+:gh-repo-slug: {gh-repo-org}/{gh-repo-name}
+:gh-pages-url: https://pages.github.com/{gh-repo-slug}
+:gh-url: https://github.com/{gh-repo-slug}
+
+This repository contains an Antora test case.
+
+== Test case
+
+Observe the behaviour and log output when Antora generate fails due to incorrect configuration.
+
+Antora version :: 3.1
+
+== Setup
+
+.Components on branches
+[%autowidth,cols="3*^,",frame=none,grid=rows]
+|===
+| 2+^h|Git branches |
+h|Component m|main m|feature |
+|a |found |found | version by refname
+|b |- |found |version refname
+|===
+
+The working configuration below, takes component *a* and *b* from branch *feature* where they both exist.
+
+.A working playbook:
+----
+content:
+  sources:
+  - url: https://github.com/sturtison/antora-test-case-2023-a
+    start_paths: doc/a, doc/b
+    branches: [new-feature]
+----
+
+In the playbook below, component *b* does not exist on branch *main*.
+
+.Configuration error
+
+----
+content:
+  sources:
+  - url: https://github.com/sturtison/antora-test-case-2023-a
+    start_paths: doc/a, doc/b
+    branches: [main,new-feature]
+----
