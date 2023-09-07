@@ -24,7 +24,7 @@ Antora version :: 3.1
 | 2+^h|Git branches |
 h|Component m|main m|feature |
 |a |found |found | version by refname
-|b |- |found |version refname
+|b |- |found |version by refname
 |===
 
 The working configuration below, takes component *a* and *b* from branch *feature* where they both exist.
