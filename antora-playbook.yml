@@ -1,13 +1,13 @@
 site:
   title: 'antora-test-case-2023-a'
   url: https://pages.github.com/sturtison/antora-test-case-2023-a
-  start_page: a::index.adoc
+  start_page: comp-a1::index.adoc
 content:
   edit_url: '{web_url}/blob/{refname}/{path}'
   sources:
   - url: https://github.com/sturtison/antora-test-case-2023-a
-    start_paths: doc/comp-a
-    branches: [${SKE_ANTORA_BRANCH_LIST}]
+    start_paths: doc/comp-a1,doc/comp-a2
+    branches: HEAD
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable

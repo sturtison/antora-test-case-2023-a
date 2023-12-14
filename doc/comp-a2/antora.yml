@@ -1,0 +1,19 @@
+name: comp-a2
+title: `Comp a2`
+version: ~
+nav:
+- modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    # Built-in Settings
+    example-caption: false
+    experimental: '@'
+    icons: font@
+    idprefix: '@'
+    idseparator: '-@'
+    listing-caption: false
+    sectanchors: '@'
+    sectids: '@'
+    table-frame: all@
+    table-grid: all@
+    xrefstyle: full@

@@ -1,0 +1,56 @@
+= Antora Support Test Page: {page-component-name}
+:thumbnail: width=60
+
+Testing images
+
+[horizontal]
+
+page-component-title :: {page-component-title}
+page-component-name :: {page-component-name}
+page-component-version :: {page-component-version}
+thumbnail :: {thumbnail}
+
+== Bad relative reference
+
+[horizontal]
+++image::../images/sunset.jpg[]++ :: 
++
+image::../images/sunset.jpg[Sunset,{thumbnail}]
+
+== Images from the same component
+
+=== Same module
+
+[horizontal]
+++image::sunset.jpg[]++ ::
++
+image::sunset.jpg[Sunset,{thumbnail}]
+
+++image::ROOT:sunset.jpg[]++ :: 
++
+image::ROOT:sunset.jpg[Sunset,{thumbnail}]
+
+++image::comp-a1:ROOT:sunset.jpg[]++ :: 
++
+image::comp-a1:ROOT:sunset.jpg[Sunset,{thumbnail}]
+
+=== Different module
+
+[horizontal]
+++image::module1:sunset.jpg[]++ ::
++
+image::module1:sunset.jpg[Sunset,{thumbnail}]
+
+++image::comp-a1:module1:sunset.jpg[]++ :: 
++
+image::comp-a1:module1:sunset.jpg[Sunset,{thumbnail}]
+
+== Images from a different component
+
+[horizontal]
+++image::comp-a2:ROOT:sunset.jpg[]++ ::
++
+image::comp-a2:ROOT:sunset.jpg[Sunset,{thumbnail}]
+++image::comp-a2:module1:sunset.jpg[]++ ::
++
+image::comp-a2:module1:sunset.jpg[Sunset,{thumbnail}]
