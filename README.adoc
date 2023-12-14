@@ -1,51 +1,58 @@
-:gh-repo-name: antora-test-case-2023-a
-= {gh-repo-name}
-:experimental:
-:source-language: yaml
-:source-highlighter: highlightjs
-:gh-repo-org: sturtison
-:gh-repo-slug: {gh-repo-org}/{gh-repo-name}
-:gh-pages-url: https://pages.github.com/{gh-repo-slug}
-:gh-url: https://github.com/{gh-repo-slug}
+= Antora Use Case Tester
+:toc: left
 
-This repository contains an Antora test case.
+Use cases:
 
-== Test case
+Exercise Antora support by VSCode ::
 
-Observe the behaviour and log output when Antora generate fails due to incorrect configuration.
+* [[gh-434]]https://github.com/asciidoctor/asciidoctor-vscode/issues/434[asciidoctor-vscode#434]
 
-Antora version :: 3.1
+* [[gh-829]]https://github.com/asciidoctor/asciidoctor-vscode/issues/829[asciidoctor-vscode#829]
 
-== Setup
+* [[gh-830]]https://github.com/asciidoctor/asciidoctor-vscode/issues/830[asciidoctor-vscode#830]
 
-.Components on branches
-[%autowidth,cols="3*^,",frame=none,grid=rows]
-|===
-| 2+^h|Git branches |
-h|Component m|main m|feature |
-|a |found |found | version by refname
-|b |- |found |version by refname
-|===
+== Components
 
-The working configuration below, takes component *a* and *b* from branch *feature* where they both exist.
+comp-a1, comp-a2 are a component pair.
 
-.A working playbook:
-----
-content:
-  sources:
-  - url: https://github.com/sturtison/antora-test-case-2023-a
-    start_paths: doc/a, doc/b
-    branches: [new-feature]
-----
+=== comp-a1
 
-In the playbook below, component *b* does not exist on branch *main*.
+`doc/comp-a1`  :: The main component *comp-1a*
 
-.Configuration error
+[horizontal]
+antora.yml ::: Has `version: ~` for <<gh-434>>, <<gh-829>>
+ROOT/pages/index.adoc :::
++
+--
+References images in:
 
-----
-content:
-  sources:
-  - url: https://github.com/sturtison/antora-test-case-2023-a
-    start_paths: doc/a, doc/b
-    branches: [main,new-feature]
-----
+.Same component: 
+ image::sunset.jpg[]
+ image::ROOT:sunset.jpg[]
+ image::comp-1a:ROOT:sunset.jpg[]
+
+.Different component
+ image::comp-1b:ROOT:sunset.jpg[]
+ image::comp-1b:module1:sunset.jpg[]
+--
+
+=== comp-a2
+
+`doc/comp-a2`  :: To hold images referenced by *comp-1a*
+
+[horizontal]
+antora.yml ::: Has `version: ~` for <<gh-434>>, <<gh-829>>
+ROOT/pages/index.adoc :::
++
+--
+References images in:
+
+.Same component: 
+ image::sunset.jpg[]
+ image::ROOT:sunset.jpg[]
+ image::comp-1a:ROOT:sunset.jpg[]
+
+.Different component
+ image::comp-1b:ROOT:sunset.jpg[]
+ image::comp-1b:module1:sunset.jpg[]
+--
