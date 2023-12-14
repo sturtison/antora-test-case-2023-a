@@ -5,11 +5,11 @@ Use cases:
 
 Exercise Antora support by VSCode ::
 
-* [[gh-434]]https://github.com/asciidoctor/asciidoctor-vscode/issues/434[asciidoctor-vscode#434]
+* [[gh-434,#434]]https://github.com/asciidoctor/asciidoctor-vscode/issues/434[asciidoctor-vscode#434]
 
-* [[gh-829]]https://github.com/asciidoctor/asciidoctor-vscode/issues/829[asciidoctor-vscode#829]
+* [[gh-829,#829]]https://github.com/asciidoctor/asciidoctor-vscode/issues/829[asciidoctor-vscode#829]
 
-* [[gh-830]]https://github.com/asciidoctor/asciidoctor-vscode/issues/830[asciidoctor-vscode#830]
+* [[gh-830,#830]]https://github.com/asciidoctor/asciidoctor-vscode/issues/830[asciidoctor-vscode#830]
 
 == Components
 
