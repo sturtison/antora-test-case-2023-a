@@ -1,9 +1,9 @@
 = Antora Use Case Tester
 :toc: left
 
-Use cases:
+Exercise Antora support by VSCode
 
-Exercise Antora support by VSCode ::
+== Issues
 
 * [[gh-434,#434]]https://github.com/asciidoctor/asciidoctor-vscode/issues/434[asciidoctor-vscode#434]
 
